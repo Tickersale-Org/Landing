@@ -1,0 +1,146 @@
+.card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 14px #3753b41a, 0 4px 32px #14172722;
+  padding: 1.4rem 1.6rem;
+  margin: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  width: 380px;      /* <-- Ancho FIJO (ajusta a tu gusto, entre 310 y 350px) */
+  height: 315px;     /* <-- Alto FIJO (ajusta igual) */
+  transition: box-shadow 0.21s, transform 0.16s;
+  border: 2px solid #e8eaf4;
+  cursor: pointer;
+  outline: none;
+}
+.card:hover,
+.card:focus {
+  box-shadow: 0 10px 32px #44f0b670, 0 4px 32px #2222;
+  border-color: #44f0b6;
+  transform: translateY(-4px) scale(1.035);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.event {
+  font-size: 1.13rem;
+  font-weight: 800;
+  color: #2554d9;
+  letter-spacing: -.5px;
+  flex: 1 1 0;
+  min-width: 0;
+  margin-right: 8px;
+  word-break: break-word;
+}
+
+.verified {
+  background: linear-gradient(90deg, #44f0b6, #3753b4 80%);
+  color: #fff;
+  font-size: .82rem;
+  padding: 2px 10px;
+  border-radius: 10px;
+  font-weight: bold;
+  margin-left: 4px;
+  box-shadow: 0 2px 8px #44f0b624;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.meta {
+  font-size: 0.98rem;
+  color: #adb8dd;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2px;
+  gap: 8px;
+}
+.section {
+  color: #656c93;
+  font-style: italic;
+}
+
+.venue {
+  font-size: 0.99rem;
+  color: #3e4879;
+  margin-bottom: 0.4rem;
+}
+
+.sellerInfo {
+  display: flex;
+  justify-content: space-between;
+  color: #7881a8;
+  font-size: 0.92rem;
+  margin-bottom: 0.26rem;
+  gap: 0.8rem;
+}
+.seller {
+  font-weight: 500;
+}
+.published {
+  font-style: italic;
+  font-size: .89rem;
+}
+
+.badges {
+  display: flex;
+  gap: 0.6rem;
+  margin-bottom: .37rem;
+  flex-wrap: wrap;
+}
+.stock {
+  background: #f0f4ff;
+  color: #2554d9;
+  font-weight: 700;
+  padding: 2.5px 10px;
+  border-radius: 12px;
+  font-size: .93rem;
+  border: 1px solid #e9eaf4;
+}
+.ahorro {
+  background: #e7fff6;
+  color: #17b971;
+  font-weight: 700;
+  padding: 2.5px 10px;
+  border-radius: 12px;
+  font-size: .93rem;
+  border: 1px solid #befad5;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.price {
+  font-size: 1.23rem;
+  color: #26cc7b;
+  font-weight: 900;
+  letter-spacing: -1px;
+}
+
+.buyButton {
+  background: linear-gradient(90deg, #3753b4, #44f0b6 90%);
+  color: #fff;
+  border: none;
+  border-radius: 9px;
+  padding: 0.48rem 1.15rem;
+  font-weight: 700;
+  font-size: 1.08rem;
+  cursor: pointer;
+  transition: background 0.2s, opacity 0.15s;
+  opacity: 0.6;
+}
+.buyButton:disabled {
+  background: #e0e0e0;
+  color: #aaa;
+  cursor: not-allowed;
+  opacity: 1;
+}

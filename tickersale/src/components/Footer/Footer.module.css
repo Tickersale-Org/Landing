@@ -1,0 +1,451 @@
+/* Footer Component Styles - Perfectamente Centrado y Responsivo */
+.footer {
+  background-color: #1a1a1a;
+  color: #e2e8f0;
+  width: 100%;
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Líneas separadoras superiores e inferiores */
+.topSeparator,
+.bottomSeparator {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #4a5568, transparent);
+}
+
+.topSeparator {
+  margin-bottom: 0;
+}
+
+.bottomSeparator {
+  margin-top: 0;
+}
+
+/* Contenedor principal centrado */
+.footerContainer {
+  max-width: 1200px;
+  width: 100%;
+  padding: 3rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Contenido principal del footer */
+.mainContent {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 3rem;
+  width: 100%;
+  max-width: 800px;
+  margin-bottom: 2rem;
+}
+
+/* Columnas de enlaces */
+.linkColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  flex: 1;
+  min-width: 0;
+}
+
+/* Sección de redes sociales */
+.socialSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  flex: 1;
+  min-width: 0;
+}
+
+/* Títulos de secciones */
+.sectionTitle {
+  font-size: clamp(1rem, 2vw, 1.1rem);
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+
+/* Navegación de enlaces */
+.linkNavigation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+/* Enlaces del footer */
+.footerLink {
+  color: #a0aec0;
+  text-decoration: none;
+  font-size: clamp(0.85rem, 1.5vw, 0.95rem);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.footerLink:hover {
+  color: #ff8a50;
+  background-color: rgba(255, 138, 80, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Contenedor de redes sociales */
+.socialContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Iconos sociales */
+.socialIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background-color: #2d3748;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.socialIcon:hover {
+  background-color: #ff8a50;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(255, 138, 80, 0.4);
+}
+
+.socialIcon svg {
+  width: 20px;
+  height: 20px;
+  fill: #e2e8f0;
+  transition: fill 0.3s ease;
+  flex-shrink: 0;
+}
+
+.socialIcon:hover svg {
+  fill: #ffffff;
+}
+
+/* Línea separadora del contenido */
+.contentSeparator {
+  width: 100%;
+  max-width: 600px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #4a5568, transparent);
+  margin: 2rem 0 1.5rem;
+}
+
+/* Sección de copyright */
+.copyrightSection {
+  color: #718096;
+  font-size: clamp(0.8rem, 1.5vw, 0.9rem);
+  text-align: center;
+  padding: 1rem 0;
+  max-width: 100%;
+  word-wrap: break-word;
+}
+
+/* Media Queries Responsivas - Centrado Perfecto */
+
+/* Pantallas grandes (1400px y más) */
+@media (min-width: 1400px) {
+  .footerContainer {
+    max-width: 1400px;
+    padding: 3.5rem 2rem;
+  }
+
+  .mainContent {
+    gap: 4rem;
+    max-width: 900px;
+  }
+}
+
+/* Pantallas medianas (1024px y menos) */
+@media (max-width: 1024px) {
+  .footerContainer {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .mainContent {
+    gap: 2.5rem;
+    max-width: 700px;
+  }
+}
+
+/* Tablets (768px y menos) */
+@media (max-width: 768px) {
+  .footerContainer {
+    padding: 2rem 1rem;
+  }
+
+  .mainContent {
+    flex-direction: column;
+    gap: 2.5rem;
+    align-items: center;
+  }
+
+  .linkColumn,
+  .socialSection {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .footerLink {
+    white-space: normal;
+    text-align: center;
+  }
+}
+
+/* Móviles (480px y menos) */
+@media (max-width: 480px) {
+  .footerContainer {
+    padding: 1.5rem 0.75rem;
+  }
+
+  .mainContent {
+    gap: 2rem;
+  }
+
+  .socialContainer {
+    gap: 0.75rem;
+  }
+
+  .socialIcon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+  }
+
+  .socialIcon svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .footerLink {
+    padding: 0.375rem 0.75rem;
+    font-size: 0.85rem;
+  }
+}
+
+/* Móviles muy pequeños (320px y menos) */
+@media (max-width: 320px) {
+  .footerContainer {
+    padding: 1.25rem 0.5rem;
+  }
+
+  .mainContent {
+    gap: 1.5rem;
+  }
+
+  .socialContainer {
+    gap: 0.5rem;
+  }
+
+  .socialIcon {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+  }
+
+  .socialIcon svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+/* Landscape en móviles */
+@media (max-width: 768px) and (orientation: landscape) {
+  .footerContainer {
+    padding: 1.5rem 1rem;
+  }
+
+  .mainContent {
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: center;
+  }
+
+  .linkColumn,
+  .socialSection {
+    flex: 1;
+    max-width: 200px;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .footer {
+    background-color: #0d1117;
+  }
+
+  .sectionTitle {
+    color: #f0f6fc;
+  }
+
+  .footerLink {
+    color: #8b949e;
+  }
+
+  .footerLink:hover {
+    color: #ff8a50;
+    background-color: rgba(255, 138, 80, 0.15);
+  }
+
+  .copyrightSection {
+    color: #6e7681;
+  }
+
+  .socialIcon {
+    background-color: #21262d;
+  }
+
+  .socialIcon:hover {
+    background-color: #ff8a50;
+  }
+
+  .topSeparator,
+  .bottomSeparator,
+  .contentSeparator {
+    background: linear-gradient(90deg, transparent, #30363d, transparent);
+  }
+}
+
+/* High contrast support */
+@media (prefers-contrast: high) {
+  .footer {
+    background-color: #000000;
+    border: 2px solid #ffffff;
+  }
+
+  .sectionTitle {
+    color: #ffffff;
+  }
+
+  .footerLink {
+    color: #cccccc;
+    border: 1px solid transparent;
+  }
+
+  .footerLink:hover {
+    color: #ffffff;
+    background-color: #ff8a50;
+    border-color: #ff8a50;
+    transform: none;
+  }
+
+  .socialIcon {
+    background-color: #333333;
+    border: 1px solid #666666;
+  }
+
+  .socialIcon:hover {
+    background-color: #ff8a50;
+    border-color: #ff8a50;
+  }
+
+  .copyrightSection {
+    color: #ffffff;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .footerLink,
+  .socialIcon {
+    transition: none;
+  }
+
+  .footerLink:hover,
+  .socialIcon:hover {
+    transform: none;
+  }
+}
+
+/* Estados para dispositivos táctiles */
+@media (hover: none) {
+  .footerLink:hover,
+  .socialIcon:hover {
+    transform: none;
+  }
+}
+
+.footerLink:active,
+.socialIcon:active {
+  transform: scale(0.98);
+}
+
+/* Focus states para accesibilidad */
+.footerLink:focus,
+.socialIcon:focus {
+  outline: 2px solid #ff8a50;
+  outline-offset: 2px;
+}
+
+/* Asegurar centrado perfecto y sin overflow */
+.footer {
+  overflow-x: hidden;
+}
+
+.footerContainer {
+  overflow-x: hidden;
+}
+
+/* Optimización para pantallas muy anchas */
+@media (min-width: 1600px) {
+  .mainContent {
+    max-width: 1000px;
+  }
+}
+
+/* Asegurar que el texto no se desborde */
+.sectionTitle,
+.footerLink,
+.copyrightSection {
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+/* Centrado vertical para contenedores flexibles */
+.linkColumn,
+.socialSection {
+  justify-content: center;
+}
+
+/* Asegurar espaciado consistente */
+.linkNavigation {
+  min-height: fit-content;
+}
+
+.socialContainer {
+  min-height: fit-content;
+}

@@ -1,0 +1,450 @@
+/* GoogleLoginButton Component Styles - Official Google Design Guidelines */
+
+.googleButton {
+  width: 100%;
+  background-color: #ffffff;
+  border: 2px solid #dadce0;
+  border-radius: 12px;
+  padding: 0.875rem 1.5rem;
+  font-size: clamp(0.95rem, 2vw, 1.05rem);
+  font-weight: 500;
+  font-family:
+    "Google Sans",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+  color: #3c4043;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  outline: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.googleButton:hover:not(:disabled) {
+  background-color: #f8f9fa;
+  border-color: #c1c5c9;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transform: translateY(-1px);
+}
+
+.googleButton:active:not(:disabled) {
+  background-color: #f1f3f4;
+  border-color: #9aa0a6;
+  transform: translateY(0);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.googleButton:focus {
+  outline: 2px solid #4285f4;
+  outline-offset: 2px;
+  border-color: #4285f4;
+}
+
+.googleButton:disabled,
+.googleButton.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  background-color: #f8f9fa;
+  border-color: #dadce0;
+  color: #9aa0a6;
+}
+
+/* Button Content */
+.buttonContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+/* Google Logo */
+.googleLogo {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.googleButton:hover:not(:disabled) .googleLogo {
+  transform: scale(1.05);
+}
+
+/* Loading State */
+.loading {
+  pointer-events: none;
+  background-color: #f8f9fa !important;
+  border-color: #dadce0 !important;
+  color: #9aa0a6 !important;
+}
+
+.loadingContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+.spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #dadce0;
+  border-radius: 50%;
+  border-top-color: #4285f4;
+  animation: spin 1s ease-in-out infinite;
+  flex-shrink: 0;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Media Queries - Responsive Design */
+
+/* Large screens (1400px and up) */
+@media (min-width: 1400px) {
+  .googleButton {
+    padding: 1rem 1.75rem;
+    font-size: 1.1rem;
+  }
+
+  .googleLogo {
+    width: 22px;
+    height: 22px;
+  }
+
+  .spinner {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* Medium screens (1024px and down) */
+@media (max-width: 1024px) {
+  .googleButton {
+    padding: 0.8rem 1.4rem;
+  }
+
+  .buttonContent,
+  .loadingContent {
+    gap: 0.625rem;
+  }
+}
+
+/* Tablets (768px and down) */
+@media (max-width: 768px) {
+  .googleButton {
+    padding: 0.75rem 1.25rem;
+    font-size: 1rem;
+  }
+
+  .googleLogo {
+    width: 18px;
+    height: 18px;
+  }
+
+  .spinner {
+    width: 16px;
+    height: 16px;
+  }
+
+  .buttonContent,
+  .loadingContent {
+    gap: 0.5rem;
+  }
+}
+
+/* Mobile devices (480px and down) */
+@media (max-width: 480px) {
+  .googleButton {
+    padding: 0.7rem 1rem;
+    font-size: 0.95rem;
+    border-radius: 10px;
+  }
+
+  .googleLogo {
+    width: 16px;
+    height: 16px;
+  }
+
+  .spinner {
+    width: 14px;
+    height: 14px;
+  }
+
+  .buttonContent,
+  .loadingContent {
+    gap: 0.4rem;
+  }
+}
+
+/* Very small mobile devices (320px and down) */
+@media (max-width: 320px) {
+  .googleButton {
+    padding: 0.625rem 0.875rem;
+    font-size: 0.9rem;
+  }
+
+  .googleLogo {
+    width: 14px;
+    height: 14px;
+  }
+
+  .spinner {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+/* Landscape orientation on mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+  .googleButton {
+    padding: 0.625rem 1rem;
+  }
+
+  .buttonContent,
+  .loadingContent {
+    gap: 0.4rem;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .googleButton {
+    background-color: #2d3748;
+    border-color: #4a5568;
+    color: #e2e8f0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  }
+
+  .googleButton:hover:not(:disabled) {
+    background-color: #374151;
+    border-color: #6b7280;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  }
+
+  .googleButton:active:not(:disabled) {
+    background-color: #1f2937;
+    border-color: #9ca3af;
+  }
+
+  .googleButton:disabled,
+  .googleButton.disabled {
+    background-color: #1f2937;
+    border-color: #374151;
+    color: #6b7280;
+  }
+
+  .loading {
+    background-color: #1f2937 !important;
+    border-color: #374151 !important;
+    color: #6b7280 !important;
+  }
+
+  .spinner {
+    border-color: #4a5568;
+    border-top-color: #60a5fa;
+  }
+}
+
+/* High contrast support */
+@media (prefers-contrast: high) {
+  .googleButton {
+    border-width: 2px;
+    border-color: #000000;
+    background-color: #ffffff;
+    color: #000000;
+    box-shadow: none;
+  }
+
+  .googleButton:hover:not(:disabled) {
+    background-color: #f0f0f0;
+    border-color: #000000;
+    box-shadow: 0 0 0 2px #000000;
+  }
+
+  .googleButton:focus {
+    outline: 3px solid #000000;
+    outline-offset: 2px;
+  }
+
+  .googleButton:disabled,
+  .googleButton.disabled {
+    background-color: #cccccc;
+    border-color: #666666;
+    color: #666666;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .googleButton,
+  .googleLogo,
+  .spinner {
+    transition: none;
+    animation: none;
+  }
+
+  .googleButton:hover:not(:disabled) {
+    transform: none;
+  }
+
+  .googleButton:hover:not(:disabled) .googleLogo {
+    transform: none;
+  }
+
+  .spinner {
+    animation: none;
+    border-top-color: transparent;
+  }
+}
+
+/* Touch device optimizations */
+@media (hover: none) {
+  .googleButton:hover:not(:disabled) {
+    background-color: #ffffff;
+    border-color: #dadce0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transform: none;
+  }
+
+  .googleButton:hover:not(:disabled) .googleLogo {
+    transform: none;
+  }
+}
+
+/* Ensure minimum touch target sizes */
+.googleButton {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* Prevent text selection on button */
+.googleButton {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+/* Enhanced accessibility */
+.googleButton:focus-visible {
+  outline: 2px solid #4285f4;
+  outline-offset: 2px;
+}
+
+/* Loading state accessibility */
+.loading {
+  aria-busy: true;
+}
+
+/* Ensure proper stacking order */
+.googleButton {
+  position: relative;
+  z-index: 1;
+}
+
+/* Improved button interaction feedback */
+.googleButton:active:not(:disabled) {
+  transition: all 0.1s ease;
+}
+
+/* Custom Google Brand Colors (matching official guidelines) */
+.googleButton {
+  --google-blue: #4285f4;
+  --google-green: #34a853;
+  --google-yellow: #fbbc05;
+  --google-red: #ea4335;
+  --google-grey: #9aa0a6;
+  --google-grey-light: #f8f9fa;
+  --google-grey-dark: #3c4043;
+}
+
+/* Ensure consistent font rendering */
+.googleButton {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Button hover state for better UX */
+.googleButton::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    45deg,
+    transparent,
+    rgba(66, 133, 244, 0.05),
+    transparent
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.googleButton:hover:not(:disabled)::before {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .googleButton::before {
+    transition: none;
+  }
+}
+
+/* Ensure button text doesn't wrap */
+.buttonContent,
+.loadingContent {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Ensure proper spacing in flex container */
+.buttonContent > *,
+.loadingContent > * {
+  flex-shrink: 0;
+}
+
+/* Enhanced loading state */
+.loading .buttonContent {
+  display: none;
+}
+
+.googleButton:not(.loading) .loadingContent {
+  display: none;
+}
+
+/* Ensure consistent border radius across browsers */
+.googleButton {
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+}
+
+/* Optimize for performance */
+.googleButton {
+  will-change: transform, box-shadow;
+}
+
+.googleButton:hover:not(:disabled) {
+  will-change: auto;
+}

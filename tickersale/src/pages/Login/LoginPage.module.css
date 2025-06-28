@@ -1,0 +1,632 @@
+/* LoginPage Component Styles - Professional Layout with Perfect Centering */
+
+/* Main Container */
+.loginPageContainer {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Background Pattern Overlay */
+.loginPageContainer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image:
+    radial-gradient(
+      circle at 25% 25%,
+      rgba(255, 255, 255, 0.1) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 75% 75%,
+      rgba(255, 255, 255, 0.05) 0%,
+      transparent 50%
+    );
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Main Content Area */
+.mainContent {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  min-height: calc(100vh - 140px); /* Account for navbar and footer */
+  position: relative;
+  z-index: 2;
+  box-sizing: border-box;
+}
+
+/* Content Wrapper */
+.contentWrapper {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  position: relative;
+}
+
+/* Welcome Section */
+.welcomeSection {
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.brandIcon {
+  width: 80px;
+  height: 80px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.brandSvg {
+  width: 40px;
+  height: 40px;
+  fill: #ffffff;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.welcomeTitle {
+  font-size: clamp(2rem, 5vw, 2.5rem);
+  font-weight: 700;
+  margin: 0 0 0.75rem 0;
+  line-height: 1.2;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.welcomeSubtitle {
+  font-size: clamp(1rem, 2.5vw, 1.15rem);
+  margin: 0;
+  line-height: 1.5;
+  opacity: 0.9;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Form Section */
+.formSection {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Forgot Password Section */
+.forgotPasswordSection {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: -1rem;
+  margin-bottom: 1rem;
+}
+
+/* Additional Links Section */
+.additionalLinksSection {
+  text-align: center;
+  width: 100%;
+}
+
+.signupPrompt {
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.5;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.signupLink {
+  color: #fbbf24;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.signupLink:hover {
+  color: #f59e0b;
+  text-decoration: underline;
+}
+
+.signupLink:focus {
+  outline: 2px solid #fbbf24;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Back to Home Link */
+.backToHomePrompt {
+  font-size: clamp(0.85rem, 1.8vw, 0.95rem);
+  color: #ffffff;
+  margin: 0.75rem 0 0 0;
+  line-height: 1.5;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.backToHomeLink {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.backToHomeLink:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-1px);
+}
+
+.backToHomeLink:focus {
+  outline: 2px solid rgba(255, 255, 255, 0.5);
+  outline-offset: 2px;
+}
+
+/* Security Notice */
+.securityNotice {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  margin-top: 1rem;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.securityIcon {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.securitySvg {
+  width: 20px;
+  height: 20px;
+  fill: #10b981;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
+}
+
+.securityText {
+  font-size: clamp(0.8rem, 1.8vw, 0.9rem);
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.4;
+  text-align: center;
+  opacity: 0.9;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Media Queries - Responsive Design */
+
+/* Large screens (1400px and up) */
+@media (min-width: 1400px) {
+  .mainContent {
+    padding: 3rem 2rem;
+  }
+
+  .contentWrapper {
+    max-width: 550px;
+    gap: 2.5rem;
+  }
+
+  .brandIcon {
+    width: 90px;
+    height: 90px;
+    border-radius: 22px;
+  }
+
+  .brandSvg {
+    width: 45px;
+    height: 45px;
+  }
+
+  .securityNotice {
+    padding: 1.25rem 2rem;
+  }
+}
+
+/* Medium screens (1024px and down) */
+@media (max-width: 1024px) {
+  .mainContent {
+    padding: 1.5rem 1rem;
+    min-height: calc(100vh - 130px);
+  }
+
+  .contentWrapper {
+    max-width: 450px;
+    gap: 1.75rem;
+  }
+
+  .brandIcon {
+    width: 70px;
+    height: 70px;
+    border-radius: 18px;
+  }
+
+  .brandSvg {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+/* Tablets (768px and down) */
+@media (max-width: 768px) {
+  .mainContent {
+    padding: 1.25rem 0.75rem;
+    min-height: calc(100vh - 120px);
+  }
+
+  .contentWrapper {
+    max-width: 100%;
+    gap: 1.5rem;
+  }
+
+  .welcomeSection {
+    margin-bottom: 0.5rem;
+  }
+
+  .brandIcon {
+    width: 65px;
+    height: 65px;
+    border-radius: 16px;
+    margin-bottom: 1.25rem;
+  }
+
+  .brandSvg {
+    width: 32px;
+    height: 32px;
+  }
+
+  .securityNotice {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+    padding: 0.875rem 1.25rem;
+  }
+
+  .securityIcon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .securitySvg {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+/* Mobile devices (480px and down) */
+@media (max-width: 480px) {
+  .mainContent {
+    padding: 1rem 0.5rem;
+    min-height: calc(100vh - 110px);
+  }
+
+  .contentWrapper {
+    gap: 1.25rem;
+  }
+
+  .welcomeSection {
+    margin-bottom: 0.25rem;
+  }
+
+  .brandIcon {
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    margin-bottom: 1rem;
+  }
+
+  .brandSvg {
+    width: 30px;
+    height: 30px;
+  }
+
+  .securityNotice {
+    padding: 0.75rem 1rem;
+    margin-top: 0.75rem;
+  }
+
+  .forgotPasswordSection {
+    margin-top: -0.75rem;
+    margin-bottom: 0.75rem;
+  }
+}
+
+/* Very small mobile devices (320px and down) */
+@media (max-width: 320px) {
+  .mainContent {
+    padding: 0.75rem 0.25rem;
+  }
+
+  .contentWrapper {
+    gap: 1rem;
+  }
+
+  .brandIcon {
+    width: 55px;
+    height: 55px;
+    border-radius: 14px;
+    margin-bottom: 0.875rem;
+  }
+
+  .brandSvg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .securityNotice {
+    padding: 0.625rem 0.875rem;
+    border-radius: 10px;
+  }
+}
+
+/* Landscape orientation on mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+  .mainContent {
+    padding: 1rem 0.75rem;
+    min-height: calc(100vh - 100px);
+  }
+
+  .contentWrapper {
+    gap: 1rem;
+  }
+
+  .welcomeSection {
+    margin-bottom: 0;
+  }
+
+  .brandIcon {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    margin-bottom: 0.75rem;
+  }
+
+  .brandSvg {
+    width: 25px;
+    height: 25px;
+  }
+
+  .securityNotice {
+    flex-direction: row;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .loginPageContainer {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  }
+
+  .brandIcon {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.15);
+  }
+
+  .securityNotice {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .signupLink {
+    color: #fcd34d;
+  }
+
+  .signupLink:hover {
+    color: #f59e0b;
+  }
+}
+
+/* High contrast support */
+@media (prefers-contrast: high) {
+  .loginPageContainer {
+    background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+  }
+
+  .welcomeTitle,
+  .welcomeSubtitle,
+  .signupPrompt,
+  .securityText {
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  }
+
+  .brandIcon {
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid #ffffff;
+  }
+
+  .securityNotice {
+    background: rgba(255, 255, 255, 0.15);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+  }
+
+  .signupLink {
+    color: #ffff00;
+    text-decoration: underline;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .loginPageContainer::before {
+    animation: none;
+  }
+
+  .signupLink,
+  .brandIcon,
+  .securityNotice {
+    transition: none;
+  }
+
+  .signupLink:hover {
+    transform: none;
+  }
+}
+
+/* Touch device optimizations */
+@media (hover: none) {
+  .signupLink:hover {
+    text-decoration: none;
+    color: #fbbf24;
+  }
+}
+
+/* Ensure minimum touch target sizes */
+.signupLink {
+  min-height: 44px;
+  min-width: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+/* Focus states for accessibility */
+.signupLink:focus {
+  outline: 2px solid #fbbf24;
+  outline-offset: 2px;
+}
+
+/* Prevent text selection on non-text elements */
+.brandIcon,
+.securityIcon {
+  user-select: none;
+}
+
+/* Ensure proper contrast ratios */
+.welcomeTitle,
+.welcomeSubtitle,
+.signupPrompt {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Loading state animation for page entrance */
+@keyframes pageSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.contentWrapper {
+  animation: pageSlideIn 0.8s ease-out;
+}
+
+/* Remove animation for reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .contentWrapper {
+    animation: none;
+  }
+}
+
+/* Glassmorphism effect enhancements */
+.brandIcon,
+.securityNotice {
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+}
+
+/* Ensure content doesn't overflow on very small screens */
+.contentWrapper {
+  min-width: 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Improve visual hierarchy */
+.welcomeSection {
+  z-index: 1;
+  position: relative;
+}
+
+.formSection {
+  z-index: 2;
+  position: relative;
+}
+
+/* Ensure proper spacing between sections */
+.additionalLinksSection {
+  margin-top: 0.5rem;
+}
+
+/* Enhanced security notice styling */
+.securityNotice {
+  transition: all 0.3s ease;
+}
+
+.securityNotice:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-1px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .securityNotice:hover {
+    transform: none;
+  }
+}
+
+/* Ensure the page maintains proper layout on all screen sizes */
+@media (min-height: 800px) {
+  .mainContent {
+    min-height: calc(100vh - 160px);
+  }
+}
+
+@media (max-height: 600px) {
+  .mainContent {
+    min-height: auto;
+    padding: 1rem 0.75rem;
+  }
+
+  .contentWrapper {
+    gap: 1rem;
+  }
+}

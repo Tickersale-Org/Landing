@@ -1,0 +1,138 @@
+/* Landing Page Styles - Completamente Responsivo */
+.landing {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.main {
+  flex: 1;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Asegurar que todos los elementos hijos respeten los límites */
+.landing *,
+.main * {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+/* Eliminar márgenes por defecto en elementos hijos directos */
+.landing > *,
+.main > * {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* Asegurar que las secciones no causen overflow */
+.main section {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+  margin: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Media Queries para diferentes breakpoints */
+
+/* Tablets grandes (1024px y menos) */
+@media (max-width: 1024px) {
+  .landing {
+    overflow-x: hidden;
+  }
+
+  .main {
+    overflow-x: hidden;
+  }
+}
+
+/* Tablets (768px y menos) */
+@media (max-width: 768px) {
+  .landing {
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  .main {
+    overflow-x: hidden;
+  }
+}
+
+/* Móviles (480px y menos) */
+@media (max-width: 480px) {
+  .landing {
+    width: 100vw;
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+
+  .main {
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+}
+
+/* Móviles muy pequeños (320px y menos) */
+@media (max-width: 320px) {
+  .landing {
+    width: 100vw;
+    overflow-x: hidden;
+  }
+}
+
+/* Prevenir scrolling horizontal en cualquier resolución */
+.landing {
+  position: relative;
+}
+
+.landing::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  max-width: 100vw;
+  overflow: hidden;
+}
+
+/* Asegurar que el contenido del main se mantenga dentro de los límites */
+.main {
+  min-width: 0; /* Permite que flexbox se encoja correctamente */
+  flex-shrink: 1;
+}
+
+/* Soporte para pantallas muy anchas */
+@media (min-width: 1400px) {
+  .main {
+    align-items: center;
+  }
+
+  .main > * {
+    width: 100%;
+    max-width: 1400px;
+  }
+}
+
+/* Reducir animaciones en dispositivos con preferencia de movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+  .landing,
+  .main {
+    scroll-behavior: auto;
+  }
+}

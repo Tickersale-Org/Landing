@@ -1,0 +1,36 @@
+.bgGradient {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, #141727 0%, #3753b4 100%);
+}
+
+.mainContent {
+  flex: 1;
+  padding: 2rem 0 3rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pageTitle {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #fff;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: -1.2px;
+  text-shadow: 0 2px 8px #0003;
+  text-align: center;
+}
+
+.pageSubtitle {
+  color: #d3d9f4;
+  font-size: 1.15rem;
+  margin-bottom: 2.2rem;
+  text-align: center;
+}
+.pageSubtitle span {
+  color: #44f0b6;
+  font-weight: 600;
+}

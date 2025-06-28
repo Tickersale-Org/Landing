@@ -1,0 +1,385 @@
+/* Features Section Styles - Completamente Responsivo */
+.features {
+  padding: 100px 0;
+  background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+  position: relative;
+  width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.features::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #e2e8f0, transparent);
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+  width: 100%;
+}
+
+.sectionTag {
+  display: inline-block;
+  background: linear-gradient(135deg, #ff8a50 0%, #4ecdc4 100%);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  font-size: clamp(0.75rem, 1.5vw, 0.875rem);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 1rem;
+  white-space: nowrap;
+}
+
+.title {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 800;
+  color: #2d3748;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  word-wrap: break-word;
+  hyphens: auto;
+}
+
+.subtitle {
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  color: #718096;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+  word-wrap: break-word;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+  width: 100%;
+  max-width: none;
+}
+
+/* Decorative elements */
+.decorativeBackground {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(800px, 100vw);
+  height: min(800px, 100vw);
+  background: radial-gradient(
+    circle,
+    rgba(255, 138, 80, 0.03) 0%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.container > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Additional info section */
+.additionalInfo {
+  text-align: center;
+  margin-top: 4rem;
+  padding: 2rem;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.infoTitle {
+  font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.infoDescription {
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  color: #718096;
+  line-height: 1.6;
+  max-width: 500px;
+  margin: 0 auto 1.5rem;
+  word-wrap: break-word;
+}
+
+.infoButton {
+  background: linear-gradient(135deg, #ff8a50 0%, #ff6b6b 100%);
+  color: white;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 25px;
+  font-size: clamp(0.9rem, 1.8vw, 1rem);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  white-space: nowrap;
+  box-shadow: 0 4px 15px rgba(255, 138, 80, 0.3);
+}
+
+.infoButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 138, 80, 0.4);
+  background: linear-gradient(135deg, #ff6b6b 0%, #e55353 100%);
+}
+
+/* Media Queries Responsivas */
+
+/* Pantallas grandes (1400px y más) */
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1400px;
+    padding: 0 2rem;
+  }
+
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+  }
+}
+
+/* Tablets y pantallas medianas (1024px y menos) */
+@media (max-width: 1024px) {
+  .features {
+    padding: 80px 0;
+  }
+
+  .container {
+    padding: 0 1.5rem;
+  }
+
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+  }
+
+  .header {
+    margin-bottom: 3rem;
+  }
+}
+
+/* Tablets pequeñas (768px y menos) */
+@media (max-width: 768px) {
+  .features {
+    padding: 70px 0;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  .header {
+    margin-bottom: 2.5rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .additionalInfo {
+    margin-top: 3rem;
+    padding: 1.5rem;
+  }
+}
+
+/* Móviles (480px y menos) */
+@media (max-width: 480px) {
+  .features {
+    padding: 60px 0;
+  }
+
+  .container {
+    padding: 0 0.75rem;
+  }
+
+  .header {
+    margin-bottom: 2rem;
+  }
+
+  .sectionTag {
+    padding: 0.4rem 0.8rem;
+  }
+
+  .additionalInfo {
+    padding: 1.25rem;
+    margin-top: 2rem;
+  }
+
+  .infoButton {
+    width: 100%;
+    max-width: 280px;
+    padding: 1rem 2rem;
+  }
+
+  .grid {
+    gap: 1rem;
+  }
+}
+
+/* Móviles muy pequeños (320px y menos) */
+@media (max-width: 320px) {
+  .container {
+    padding: 0 0.5rem;
+  }
+
+  .additionalInfo {
+    padding: 1rem;
+  }
+
+  .infoButton {
+    padding: 0.875rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Landscape en móviles */
+@media (max-width: 768px) and (orientation: landscape) {
+  .features {
+    padding: 50px 0;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .additionalInfo {
+    margin-top: 2rem;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .features {
+    background: linear-gradient(180deg, #1a202c 0%, #2d3748 100%);
+  }
+
+  .features::before {
+    background: linear-gradient(90deg, transparent, #4a5568, transparent);
+  }
+
+  .title {
+    color: #f7fafc;
+  }
+
+  .subtitle {
+    color: #cbd5e0;
+  }
+
+  .additionalInfo {
+    background: #2d3748;
+    border: 1px solid #4a5568;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  .infoTitle {
+    color: #f7fafc;
+  }
+
+  .infoDescription {
+    color: #cbd5e0;
+  }
+
+  .decorativeBackground {
+    background: radial-gradient(
+      circle,
+      rgba(255, 138, 80, 0.08) 0%,
+      transparent 70%
+    );
+  }
+}
+
+/* High contrast support */
+@media (prefers-contrast: high) {
+  .title {
+    color: #000000;
+  }
+
+  .subtitle {
+    color: #333333;
+  }
+
+  .additionalInfo {
+    border: 2px solid #000000;
+  }
+
+  .infoButton {
+    border: 2px solid #ffffff;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .infoButton {
+    transition: none;
+  }
+
+  .infoButton:hover {
+    transform: none;
+  }
+}
+
+/* Asegurar que el grid sea completamente fluido */
+.grid {
+  min-width: 0;
+}
+
+.grid > * {
+  min-width: 0;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Soporte para pantallas muy anchas */
+@media (min-width: 1600px) {
+  .grid {
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Mejoras de accesibilidad */
+.infoButton:focus {
+  outline: 2px solid #ff8a50;
+  outline-offset: 2px;
+}
+
+/* Prevenir overflow horizontal */
+.features {
+  overflow-x: hidden;
+}
+
+.container {
+  overflow-x: hidden;
+}

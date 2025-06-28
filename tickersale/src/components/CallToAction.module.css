@@ -1,0 +1,604 @@
+/* Call To Action Section Styles - Completamente Responsivo */
+.cta {
+  padding: 100px 0;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.cta::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #e2e8f0, transparent);
+}
+
+.container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  box-sizing: border-box;
+}
+
+.content {
+  background: white;
+  border-radius: 24px;
+  padding: 4rem 3rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #ff8a50, #4ecdc4, #1a237e);
+}
+
+.iconContainer {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 2rem;
+  background: linear-gradient(135deg, #ff8a50 0%, #4ecdc4 100%);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  animation: pulse 3s ease-in-out infinite;
+  flex-shrink: 0;
+}
+
+.iconContainer::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  background: linear-gradient(135deg, #ff8a50, #4ecdc4, #ff8a50);
+  border-radius: 24px;
+  z-index: -1;
+  opacity: 0.3;
+  animation: rotate 6s linear infinite;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  fill: white;
+  flex-shrink: 0;
+}
+
+.title {
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  font-weight: 800;
+  color: #2d3748;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  word-wrap: break-word;
+  hyphens: auto;
+}
+
+.subtitle {
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  color: #718096;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  word-wrap: break-word;
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.primaryButton {
+  background: linear-gradient(135deg, #ff8a50 0%, #ff6b6b 100%);
+  color: white;
+  border: none;
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  font-size: clamp(1rem, 2vw, 1.1rem);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 8px 25px rgba(255, 138, 80, 0.4);
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  min-width: 0;
+  flex-shrink: 0;
+}
+
+.primaryButton::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+
+.primaryButton:hover::before {
+  left: 100%;
+}
+
+.primaryButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(255, 138, 80, 0.5);
+  background: linear-gradient(135deg, #ff6b6b 0%, #e55353 100%);
+}
+
+.primaryButton::after {
+  content: "→";
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.primaryButton:hover::after {
+  transform: translateX(4px);
+}
+
+.secondaryButton {
+  background: transparent;
+  color: #ff8a50;
+  border: 2px solid #ff8a50;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-size: clamp(0.9rem, 1.8vw, 1rem);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  white-space: nowrap;
+  min-width: 0;
+  flex-shrink: 0;
+}
+
+.secondaryButton:hover {
+  background: #ff8a50;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 138, 80, 0.4);
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #e2e8f0;
+  width: 100%;
+}
+
+.featureItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  justify-content: center;
+  text-align: center;
+  min-width: 0;
+}
+
+.featureIcon {
+  width: 24px;
+  height: 24px;
+  fill: #ff8a50;
+  flex-shrink: 0;
+}
+
+.featureText {
+  font-size: clamp(0.85rem, 1.5vw, 0.95rem);
+  color: #4a5568;
+  font-weight: 500;
+  word-wrap: break-word;
+  min-width: 0;
+}
+
+/* Decorative background elements */
+.decorativeBackground {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(600px, 100vw);
+  height: min(600px, 100vw);
+  background: radial-gradient(
+    circle,
+    rgba(255, 138, 80, 0.05) 0%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Animations */
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Media Queries Responsivas */
+
+/* Pantallas grandes (1400px y más) */
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1200px;
+    padding: 0 2rem;
+  }
+
+  .content {
+    padding: 4.5rem 3.5rem;
+  }
+
+  .features {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+}
+
+/* Tablets y pantallas medianas (1024px y menos) */
+@media (max-width: 1024px) {
+  .cta {
+    padding: 80px 0;
+  }
+
+  .container {
+    padding: 0 1.5rem;
+  }
+
+  .content {
+    padding: 3rem 2rem;
+  }
+
+  .features {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1.25rem;
+  }
+}
+
+/* Tablets pequeñas (768px y menos) */
+@media (max-width: 768px) {
+  .cta {
+    padding: 70px 0;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  .content {
+    padding: 2.5rem 1.5rem;
+    border-radius: 20px;
+  }
+
+  .iconContainer {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 1.5rem;
+  }
+
+  .icon {
+    width: 35px;
+    height: 35px;
+  }
+
+  .subtitle {
+    margin-bottom: 2rem;
+  }
+
+  .buttonGroup {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    justify-content: center;
+  }
+
+  .features {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+  }
+
+  .featureItem {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+}
+
+/* Móviles (480px y menos) */
+@media (max-width: 480px) {
+  .cta {
+    padding: 60px 0;
+  }
+
+  .container {
+    padding: 0 0.75rem;
+  }
+
+  .content {
+    padding: 2rem 1.25rem;
+    border-radius: 16px;
+  }
+
+  .iconContainer {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 1.25rem;
+    border-radius: 16px;
+  }
+
+  .iconContainer::before {
+    border-radius: 20px;
+  }
+
+  .icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .subtitle {
+    margin-bottom: 1.5rem;
+  }
+
+  .primaryButton {
+    padding: 0.875rem 2rem;
+  }
+
+  .secondaryButton {
+    padding: 0.875rem 1.5rem;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .featureItem {
+    justify-content: center;
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+}
+
+/* Móviles muy pequeños (320px y menos) */
+@media (max-width: 320px) {
+  .container {
+    padding: 0 0.5rem;
+  }
+
+  .content {
+    padding: 1.75rem 1rem;
+  }
+
+  .iconContainer {
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+  }
+
+  .iconContainer::before {
+    border-radius: 18px;
+  }
+
+  .icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .primaryButton {
+    padding: 0.75rem 1.5rem;
+  }
+
+  .secondaryButton {
+    padding: 0.75rem 1.25rem;
+  }
+}
+
+/* Landscape en móviles */
+@media (max-width: 768px) and (orientation: landscape) {
+  .cta {
+    padding: 50px 0;
+  }
+
+  .content {
+    padding: 2rem 1.5rem;
+  }
+
+  .buttonGroup {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    width: auto;
+    max-width: none;
+  }
+
+  .features {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .cta {
+    background: linear-gradient(180deg, #2d3748 0%, #1a202c 100%);
+  }
+
+  .cta::before {
+    background: linear-gradient(90deg, transparent, #4a5568, transparent);
+  }
+
+  .content {
+    background: #2d3748;
+    border: 1px solid #4a5568;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  }
+
+  .title {
+    color: #f7fafc;
+  }
+
+  .subtitle {
+    color: #cbd5e0;
+  }
+
+  .featureText {
+    color: #e2e8f0;
+  }
+
+  .features {
+    border-top: 1px solid #4a5568;
+  }
+
+  .decorativeBackground {
+    background: radial-gradient(
+      circle,
+      rgba(255, 138, 80, 0.1) 0%,
+      transparent 70%
+    );
+  }
+}
+
+/* High contrast support */
+@media (prefers-contrast: high) {
+  .content {
+    border: 2px solid #000000;
+  }
+
+  .title {
+    color: #000000;
+  }
+
+  .subtitle {
+    color: #333333;
+  }
+
+  .secondaryButton {
+    border-color: #000000;
+    color: #000000;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .iconContainer,
+  .iconContainer::before,
+  .primaryButton,
+  .secondaryButton {
+    animation: none;
+    transition: none;
+  }
+
+  .primaryButton:hover,
+  .secondaryButton:hover {
+    transform: none;
+  }
+
+  .primaryButton::before {
+    transition: none;
+  }
+}
+
+/* Focus states para accesibilidad */
+.primaryButton:focus,
+.secondaryButton:focus {
+  outline: 2px solid #ff8a50;
+  outline-offset: 2px;
+}
+
+/* Estados activos para dispositivos táctiles */
+@media (hover: none) {
+  .primaryButton:hover,
+  .secondaryButton:hover {
+    transform: none;
+  }
+}
+
+.primaryButton:active,
+.secondaryButton:active {
+  transform: scale(0.98);
+}
+
+/* Asegurar que el contenido no cause overflow */
+.container {
+  overflow-x: hidden;
+}
+
+.content {
+  overflow-x: hidden;
+}
+
+/* Optimización para pantallas muy anchas */
+@media (min-width: 1600px) {
+  .container {
+    max-width: 1400px;
+  }
+}
