@@ -1,0 +1,399 @@
+/* FeatureCard Component Styles - Completamente Responsivo */
+.card {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  height: auto;
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #ff8a50, #4ecdc4);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.card:hover::before {
+  transform: scaleX(1);
+}
+
+.iconContainer {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1.5rem;
+  background: linear-gradient(135deg, #ff8a50 0%, #4ecdc4 100%);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.card:hover .iconContainer {
+  transform: scale(1.1);
+  box-shadow: 0 8px 25px rgba(255, 138, 80, 0.4);
+}
+
+.iconContainer::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(135deg, #ff8a50, #4ecdc4, #ff8a50);
+  border-radius: 22px;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover .iconContainer::before {
+  opacity: 1;
+}
+
+.icon {
+  width: 32px;
+  height: 32px;
+  fill: white;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.title {
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+  word-wrap: break-word;
+  hyphens: auto;
+  flex-shrink: 0;
+}
+
+.description {
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  color: #718096;
+  line-height: 1.6;
+  margin-bottom: 0;
+  word-wrap: break-word;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+
+.card:hover .title {
+  color: #1a202c;
+}
+
+.card:hover .description {
+  color: #4a5568;
+}
+
+/* Variantes de colores para diferentes cards */
+.card.variant1 .iconContainer {
+  background: linear-gradient(135deg, #4ecdc4 0%, #26a69a 100%);
+}
+
+.card.variant1:hover .iconContainer::before {
+  background: linear-gradient(135deg, #4ecdc4, #26a69a, #4ecdc4);
+}
+
+.card.variant2 .iconContainer {
+  background: linear-gradient(135deg, #ffd54f 0%, #ff8f00 100%);
+}
+
+.card.variant2:hover .iconContainer::before {
+  background: linear-gradient(135deg, #ffd54f, #ff8f00, #ffd54f);
+}
+
+.card.variant3 .iconContainer {
+  background: linear-gradient(135deg, #1a237e 0%, #0d47a1 100%);
+}
+
+.card.variant3:hover .iconContainer::before {
+  background: linear-gradient(135deg, #1a237e, #0d47a1, #1a237e);
+}
+
+/* Media Queries Responsivas */
+
+/* Pantallas grandes (1400px y más) */
+@media (min-width: 1400px) {
+  .card {
+    padding: 2.5rem;
+    min-height: 280px;
+  }
+
+  .iconContainer {
+    width: 90px;
+    height: 90px;
+    margin-bottom: 2rem;
+  }
+
+  .icon {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+/* Tablets y pantallas medianas (1024px y menos) */
+@media (max-width: 1024px) {
+  .card {
+    padding: 1.75rem;
+    min-height: 240px;
+  }
+
+  .iconContainer {
+    width: 72px;
+    height: 72px;
+    margin-bottom: 1.25rem;
+  }
+
+  .icon {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+/* Tablets pequeñas (768px y menos) */
+@media (max-width: 768px) {
+  .card {
+    padding: 1.5rem;
+    min-height: 220px;
+  }
+
+  .iconContainer {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 1rem;
+    border-radius: 16px;
+  }
+
+  .iconContainer::before {
+    border-radius: 18px;
+  }
+
+  .icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .title {
+    margin-bottom: 0.75rem;
+  }
+}
+
+/* Móviles (480px y menos) */
+@media (max-width: 480px) {
+  .card {
+    padding: 1.25rem;
+    min-height: 200px;
+  }
+
+  .iconContainer {
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+    margin-bottom: 1rem;
+  }
+
+  .iconContainer::before {
+    border-radius: 16px;
+  }
+
+  .icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .title {
+    margin-bottom: 0.75rem;
+  }
+}
+
+/* Móviles muy pequeños (320px y menos) */
+@media (max-width: 320px) {
+  .card {
+    padding: 1rem;
+    min-height: 180px;
+  }
+
+  .iconContainer {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+  }
+
+  .iconContainer::before {
+    border-radius: 14px;
+  }
+
+  .icon {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+/* Landscape en móviles */
+@media (max-width: 768px) and (orientation: landscape) {
+  .card {
+    min-height: 180px;
+    padding: 1.25rem;
+  }
+
+  .iconContainer {
+    width: 56px;
+    height: 56px;
+    margin-bottom: 0.75rem;
+  }
+
+  .title {
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .card {
+    background: #2d3748;
+    border: 1px solid #4a5568;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  .card:hover {
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+    background: #2d3748;
+  }
+
+  .title {
+    color: #f7fafc;
+  }
+
+  .description {
+    color: #cbd5e0;
+  }
+
+  .card:hover .title {
+    color: #ffffff;
+  }
+
+  .card:hover .description {
+    color: #e2e8f0;
+  }
+}
+
+/* High contrast support */
+@media (prefers-contrast: high) {
+  .card {
+    border: 2px solid #000000;
+  }
+
+  .title {
+    color: #000000;
+  }
+
+  .description {
+    color: #333333;
+  }
+
+  .iconContainer {
+    border: 2px solid #ffffff;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .iconContainer,
+  .icon {
+    transition: none;
+  }
+
+  .card:hover {
+    transform: none;
+  }
+
+  .card:hover .iconContainer {
+    transform: none;
+  }
+}
+
+/* Asegurar que las cards mantengan proporciones consistentes */
+.card {
+  aspect-ratio: auto;
+}
+
+/* Focus states para accesibilidad */
+.card:focus {
+  outline: 2px solid #ff8a50;
+  outline-offset: 2px;
+}
+
+/* Hover states específicos para touch devices */
+@media (hover: none) {
+  .card:hover {
+    transform: none;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  }
+
+  .card:hover .iconContainer {
+    transform: none;
+    box-shadow: none;
+  }
+
+  .card:hover::before {
+    transform: scaleX(0);
+  }
+}
+
+/* Estados activos para dispositivos táctiles */
+.card:active {
+  transform: scale(0.98);
+}
+
+/* Mejorar la distribución del contenido */
+.card {
+  gap: 0;
+}
+
+/* Asegurar que el texto no se desborde */
+.title,
+.description {
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+/* Optimización para pantallas muy anchas */
+@media (min-width: 1600px) {
+  .card {
+    max-width: 400px;
+  }
+}

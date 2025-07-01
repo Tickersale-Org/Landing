@@ -1,0 +1,262 @@
+.footer {
+  background-color: #1a1a1a;
+  color: #e2e8f0;
+  width: 100%;
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.topSeparator,
+.bottomSeparator {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #4a5568, transparent);
+}
+
+.footerContainer {
+  max-width: 1200px;
+  width: 100%;
+  padding: 3rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.mainContent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2.5rem;
+  margin-bottom: 2rem;
+  width: 100%;
+  max-width: 900px;
+}
+
+.linkColumn,
+.socialSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  flex: 1;
+  min-width: 150px;
+}
+
+.sectionTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+
+.linkNavigation {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.footerLink {
+  color: #a0aec0;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+}
+
+.footerLink:hover {
+  color: #ff8a50;
+  background-color: rgba(255, 138, 80, 0.1);
+  transform: translateY(-2px);
+}
+
+.socialContainer {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.socialIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background-color: #2d3748;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.socialIcon:hover {
+  background-color: #ff8a50;
+  border-color: #ff8a50;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(255, 138, 80, 0.4);
+}
+
+.socialIcon svg {
+  width: 20px;
+  height: 20px;
+  fill: #e2e8f0;
+  transition: fill 0.3s ease;
+}
+
+.socialIcon:hover svg {
+  fill: #ffffff;
+}
+
+.contentSeparator {
+  width: 100%;
+  max-width: 600px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #4a5568, transparent);
+  margin: 2rem 0 1.5rem;
+}
+
+.copyrightSection {
+  color: #718096;
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 1rem 0;
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .mainContent {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .linkColumn,
+  .socialSection {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .footerLink {
+    white-space: normal;
+    text-align: center;
+  }
+
+  .socialIcon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .socialIcon svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footerContainer {
+    padding: 1.5rem 0.75rem;
+  }
+
+  .socialIcon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .socialIcon svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .footerLink {
+    padding: 0.375rem 0.75rem;
+    font-size: 0.85rem;
+  }
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  .footer {
+    background-color: #0d1117;
+  }
+
+  .sectionTitle {
+    color: #f0f6fc;
+  }
+
+  .footerLink {
+    color: #8b949e;
+  }
+
+  .footerLink:hover {
+    color: #ff8a50;
+    background-color: rgba(255, 138, 80, 0.15);
+  }
+
+  .copyrightSection {
+    color: #6e7681;
+  }
+
+  .socialIcon {
+    background-color: #21262d;
+    border-color: rgba(255, 255, 255, 0.08);
+  }
+
+  .socialIcon:hover {
+    background-color: #ff8a50;
+    border-color: #ff8a50;
+  }
+
+  .socialIcon svg {
+    fill: #e2e8f0;
+  }
+
+  .topSeparator,
+  .bottomSeparator,
+  .contentSeparator {
+    background: linear-gradient(90deg, transparent, #30363d, transparent);
+  }
+}
+
+/* Light mode */
+@media (prefers-color-scheme: light) {
+  .socialIcon {
+    background-color: #f1f5f9;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  .socialIcon svg {
+    fill: #2d3748;
+  }
+
+  .socialIcon:hover {
+    background-color: rgba(255, 138, 80, 0.08);
+    border-color: #ff8a50;
+  }
+
+  .socialIcon:hover svg {
+    fill: #ff8a50;
+  }
+}
+
+/* Focus states */
+.footerLink:focus,
+.socialIcon:focus {
+  outline: 2px solid #ff8a50;
+  outline-offset: 2px;
+  border-radius: 8px;
+}

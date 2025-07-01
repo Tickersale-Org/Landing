@@ -1,0 +1,28 @@
+/* App.css - Versión limpia para demo promocional */
+
+#root {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-main, system-ui, sans-serif);
+  background-color: #ffffff;
+  color: #213547;
+}
+
+/* Utilidades generales */
+.App {
+  width: 100%;
+  overflow-x: visible;
+}
+
+/* Secciones base (opcional si tu landing las usa) */
+section {
+  padding: 4rem 1.5rem;
+}
+
+@media (min-width: 768px) {
+  section {
+    padding: 6rem 2rem;
+  }
+}

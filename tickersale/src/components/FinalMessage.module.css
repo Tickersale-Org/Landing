@@ -1,0 +1,46 @@
+.final {
+  padding: 6rem 1.5rem;
+  background: linear-gradient(to bottom, #1a202c, #2d3748);
+  text-align: center;
+  color: #f7fafc;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: clamp(2rem, 5vw, 2.5rem);
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.description {
+  font-size: 1.1rem;
+  color: #cbd5e0;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.buttonGroup {
+  display: flex;
+  justify-content: center;
+}
+
+.secondaryButton {
+  background: transparent;
+  color: #ff8a50;
+  border: 2px solid #ff8a50;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.secondaryButton:hover {
+  background: #ff8a50;
+  color: white;
+}
