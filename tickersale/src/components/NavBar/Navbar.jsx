@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import ContactModal from "../ContactModal";
+import ContactModal from "../ContactModal"; 
 import styles from "./Navbar.module.css";
 
 const Navbar = () => {
