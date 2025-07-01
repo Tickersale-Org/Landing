@@ -10,7 +10,7 @@ const FinalMessage = () => {
         </p>
 
         <div className={styles.buttonGroup}>
-          <a href="#ver-como" className={styles.secondaryButton}>
+          <a href="#como-funciona" className={styles.secondaryButton}>
             Ver interfaces clave
           </a>
         </div>
@@ -18,5 +18,4 @@ const FinalMessage = () => {
     </section>
   );
 };
-
 export default FinalMessage;
