@@ -1,4 +1,4 @@
-/* Navbar Component Styles - Completamente Responsivo */
+/* =============== NAVBAR BASE =============== */
 .navbar {
   position: fixed;
   top: 0;
@@ -18,6 +18,7 @@
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
 }
 
+/* =============== CONTAINER =============== */
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -27,9 +28,9 @@
   justify-content: space-between;
   height: 70px;
   width: 100%;
-  box-sizing: border-box;
 }
 
+/* =============== LOGO =============== */
 .logo {
   display: flex;
   align-items: center;
@@ -73,7 +74,7 @@
   transform: scale(1.05);
 }
 
-/* Desktop Menu */
+/* =============== MENU DESKTOP =============== */
 .desktopMenu {
   display: flex;
   align-items: center;
@@ -81,8 +82,6 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  flex-shrink: 1;
-  min-width: 0;
 }
 
 .navLink {
@@ -120,38 +119,13 @@
   width: 100%;
 }
 
-.loginButton {
-  background-color: #ff8a50;
-  color: #ffffff;
-  border: none;
-  padding: 0.75rem 1.5rem;
-  border-radius: 25px;
-  font-size: clamp(0.85rem, 1.2vw, 0.9rem);
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-decoration: none;
-  display: inline-block;
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-
-.loginButton:hover {
-  background-color: #ff6b6b;
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(255, 138, 80, 0.4);
-}
-
-/* Hamburger Menu */
+/* =============== HAMBURGER =============== */
 .hamburger {
   display: none;
   flex-direction: column;
   cursor: pointer;
-  padding: 5px;
-  z-index: 1001;
   background: none;
   border: none;
-  flex-shrink: 0;
 }
 
 .hamburgerLine {
@@ -159,8 +133,8 @@
   height: 3px;
   background-color: #ffffff;
   margin: 2px 0;
-  transition: all 0.3s ease;
   border-radius: 2px;
+  transition: all 0.3s ease;
 }
 
 .navbar.scrolled .hamburgerLine {
@@ -170,16 +144,14 @@
 .hamburger.open .hamburgerLine:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
-
 .hamburger.open .hamburgerLine:nth-child(2) {
   opacity: 0;
 }
-
 .hamburger.open .hamburgerLine:nth-child(3) {
   transform: rotate(-45deg) translate(7px, -6px);
 }
 
-/* Mobile Menu */
+/* =============== MOBILE MENU =============== */
 .mobileMenu {
   position: fixed;
   top: 70px;
@@ -193,10 +165,8 @@
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s ease;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
   max-height: calc(100vh - 70px);
   overflow-y: auto;
-  box-sizing: border-box;
 }
 
 .mobileMenu.open {
@@ -207,12 +177,11 @@
 
 .mobileMenuList {
   list-style: none;
-  margin: 0;
   padding: 0;
+  margin: 0;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  max-width: 100%;
 }
 
 .mobileNavLink {
@@ -224,64 +193,13 @@
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   transition: color 0.3s ease;
   cursor: pointer;
-  display: block;
-  width: 100%;
-  box-sizing: border-box;
 }
 
 .mobileNavLink:hover {
   color: #ff8a50;
 }
 
-.mobileLoginButton {
-  background-color: #ff8a50;
-  color: #ffffff;
-  border: none;
-  padding: 1rem 2rem;
-  border-radius: 25px;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-decoration: none;
-  text-align: center;
-  display: block;
-  margin-top: 1rem;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.mobileLoginButton:hover {
-  background-color: #ff6b6b;
-  transform: translateY(-2px);
-}
-
-/* Media Queries Responsivas */
-
-/* Pantallas grandes (1400px y más) */
-@media (min-width: 1400px) {
-  .container {
-    max-width: 1400px;
-    padding: 0 2rem;
-  }
-
-  .desktopMenu {
-    gap: 2.5rem;
-  }
-}
-
-/* Tablets y pantallas medianas (1024px y menos) */
-@media (max-width: 1024px) {
-  .desktopMenu {
-    gap: 1.5rem;
-  }
-
-  .loginButton {
-    padding: 0.625rem 1.25rem;
-  }
-}
-
-/* Tablets pequeñas (768px y menos) */
+/* =============== RESPONSIVE =============== */
 @media (max-width: 768px) {
   .desktopMenu {
     display: none;
@@ -291,12 +209,13 @@
     display: flex;
   }
 
-  .container {
-    padding: 0 1rem;
+  .mobileMenu {
+    width: 100vw;
+    left: 0;
+    right: 0;
   }
 }
 
-/* Móviles (480px y menos) */
 @media (max-width: 480px) {
   .container {
     height: 60px;
@@ -322,51 +241,9 @@
     font-size: 1rem;
     padding: 0.875rem 0;
   }
-
-  .mobileLoginButton {
-    padding: 0.875rem 1.5rem;
-    font-size: 0.95rem;
-    margin-top: 0.75rem;
-  }
 }
 
-/* Móviles muy pequeños (320px y menos) */
-@media (max-width: 320px) {
-  .container {
-    padding: 0 0.5rem;
-  }
-
-  .logo {
-    font-size: 1.1rem;
-  }
-
-  .logoIcon {
-    width: 18px;
-    height: 18px;
-    margin-right: 4px;
-  }
-
-  .hamburgerLine {
-    width: 20px;
-  }
-}
-
-/* Landscape en móviles */
-@media (max-width: 768px) and (orientation: landscape) {
-  .mobileMenu {
-    max-height: calc(100vh - 60px);
-  }
-
-  .mobileMenuList {
-    gap: 0.25rem;
-  }
-
-  .mobileNavLink {
-    padding: 0.75rem 0;
-  }
-}
-
-/* Dark mode support */
+/* =============== MODO OSCURO =============== */
 @media (prefers-color-scheme: dark) {
   .navbar.scrolled {
     background-color: rgba(26, 26, 26, 0.95);
@@ -399,188 +276,11 @@
   }
 }
 
-/* High contrast support */
-@media (prefers-contrast: high) {
-  .navbar.scrolled {
-    background-color: rgba(255, 255, 255, 1);
-    border-bottom: 2px solid #000000;
-  }
-
-  .navbar.scrolled .logo,
-  .navbar.scrolled .navLink {
-    color: #000000;
-  }
-
-  .loginButton {
-    border: 2px solid #000000;
-  }
-}
-
-/* Reduced motion support */
-@media (prefers-reduced-motion: reduce) {
-  .navbar,
-  .navLink,
-  .hamburgerLine,
-  .mobileMenu,
-  .loginButton,
-  .mobileLoginButton,
-  .logoIcon {
-    transition: none;
-  }
-
-  .loginButton:hover,
-  .mobileLoginButton:hover {
-    transform: none;
-  }
-
-  .logoIcon:hover {
-    transform: none;
-  }
-}
-
-/* Asegurar que el menú móvil no cause overflow */
-@media (max-width: 768px) {
-  .mobileMenu {
-    width: 100vw;
-    max-width: 100vw;
-    left: 0;
-    right: 0;
-  }
-}
-
-/* Focus states para accesibilidad */
-.navLink:focus,
-.loginButton:focus,
-.mobileNavLink:focus,
-.mobileLoginButton:focus,
-.hamburger:focus {
-  outline: 2px solid #ff8a50;
-  outline-offset: 2px;
-}
-
-/* Asegurar que el navbar no interfiera con el scroll */
-@media (min-width: 769px) {
-  .mobileMenu {
-    display: none !important;
-  }
-}
-
-/* Authentication Section */
-.authSection {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.authLoading {
-  width: 100px;
-  height: 36px;
-  background: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 0.1) 25%,
-    rgba(255, 255, 255, 0.2) 50%,
-    rgba(255, 255, 255, 0.1) 75%
-  );
-  background-size: 200% 100%;
-  animation: shimmer 1.5s infinite;
-  border-radius: 18px;
-}
-
-@keyframes shimmer {
-  0% {
-    background-position: -200% 0;
-  }
-  100% {
-    background-position: 200% 0;
-  }
-}
-
-.navbar.scrolled .authLoading {
-  background: linear-gradient(
-    90deg,
-    rgba(0, 0, 0, 0.05) 25%,
-    rgba(0, 0, 0, 0.1) 50%,
-    rgba(0, 0, 0, 0.05) 75%
-  );
-  background-size: 200% 100%;
-}
-
-/* Mobile Authentication Section */
-.mobileAuthSection {
-  margin-top: 1rem;
-  padding-top: 1rem;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-.mobileUserSection {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-/* Ensure proper spacing for authenticated state */
-.authSection .userMenuContainer {
-  margin: 0;
-}
-
-/* Media Queries for Authentication Section */
-
-/* Large screens (1400px and up) */
-@media (min-width: 1400px) {
-  .authLoading {
-    width: 120px;
-    height: 40px;
-  }
-}
-
-/* Medium screens (1024px and down) */
-@media (max-width: 1024px) {
-  .authLoading {
-    width: 90px;
-    height: 34px;
-  }
-}
-
-/* Tablets (768px and down) */
-@media (max-width: 768px) {
-  .authSection {
-    display: none; /* Hidden on mobile, shown in mobile menu */
-  }
-
-  .mobileAuthSection {
-    display: block;
-  }
-}
-
-/* Mobile devices (480px and down) */
-@media (max-width: 480px) {
-  .mobileAuthSection {
-    margin-top: 0.75rem;
-    padding-top: 0.75rem;
-  }
-
-  .authLoading {
-    width: 80px;
-    height: 32px;
-    border-radius: 16px;
-  }
-}
-
-/* Dark mode support for authentication section */
-@media (prefers-color-scheme: dark) {
-  .mobileAuthSection {
-    border-top-color: rgba(255, 255, 255, 0.1);
-  }
-}
-
-/* Reduced motion support */
-@media (prefers-reduced-motion: reduce) {
-  .authLoading {
-    animation: none;
-    background: rgba(255, 255, 255, 0.15);
-  }
-
-  .navbar.scrolled .authLoading {
-    background: rgba(0, 0, 0, 0.08);
-  }
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
 }

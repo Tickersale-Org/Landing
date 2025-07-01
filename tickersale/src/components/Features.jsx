@@ -56,7 +56,7 @@ const Features = () => {
   ];
 
   return (
-    <section className={styles.features}>
+    <section id="caracteristicas" className={styles.features}>
       {/* Elemento decorativo de fondo */}
       <div className={styles.decorativeBackground}></div>
 
